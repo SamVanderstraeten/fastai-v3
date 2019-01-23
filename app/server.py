@@ -10,7 +10,7 @@ from fastai.vision import *
 
 defaults.device = torch.device('cpu')
 
-model_file_url = 'https://drive.google.com/uc?export=download&id=1JS1JMVrx0x5KUr9qS8yaaLyQj6OxsTC_'
+model_file_url = 'https://drive.google.com/uc?export=download&id=1JVVGAfuBn5Yy6m2uD9_PUEkcTNBNi5zk'
 model_file_name = 'model'
 
 classes = ['clubs', 'diamonds', 'hearts', 'spades']
@@ -26,6 +26,7 @@ async def download_file(url, dest):
         async with session.get(url) as response:
             data = await response.read()
             with open(dest, 'wb') as f: f.write(data)
+			print("Model file downloaded! (" + dest + ")") 
 
 async def setup_learner():
     await download_file(model_file_url, path/'models'/f'{model_file_name}.pkl')
