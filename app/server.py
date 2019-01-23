@@ -10,7 +10,7 @@ from fastai.vision import *
 
 defaults.device = torch.device('cpu')
 
-model_file_url = 'https://drive.google.com/uc?export=download&id=1JVVGAfuBn5Yy6m2uD9_PUEkcTNBNi5zk'
+model_file_url = 'https://drive.google.com/uc?export=download&id=1-Cf5vSuEeSaezhMaEgVKHSR8E9Cl86ei'
 model_file_name = 'model'
 
 classes = ['clubs', 'diamonds', 'hearts', 'spades']
